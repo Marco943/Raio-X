@@ -1,11 +1,12 @@
 # Importar Streamlit e Pandas
 import streamlit as st, pandas as pd
 # Importar função de baixar arquivo do sharepoint
-from funcoes import baixar_excel_sharepoint, subir_arquivo_sharepoint
-from datetime import datetime
 from office365.runtime.auth.user_credential import UserCredential
 from office365.sharepoint.client_context import ClientContext
 from office365.sharepoint.files.file import File
+from funcoes import baixar_excel_sharepoint, subir_arquivo_sharepoint
+from datetime import datetime
+
 
 # Configura o Título da página
 st.set_page_config(page_title='Raio-X Piloto')
