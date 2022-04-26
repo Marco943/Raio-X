@@ -27,10 +27,10 @@ def baixar_excel_sharepoint(url_sharepoint, time, caminho_arquivo, login, senha)
     return pd.read_excel(bytes_file_obj)
 
 def subir_arquivo_sharepoint(dados, url_sharepoint, time, caminho_arquivo, login, senha):
-    url = url_sharepoint #'https://sucessoemvendassv.sharepoint.com'
-    time = time #'/sites/GestodeResultados'
-    login = login #'marco@sucessoemvendas.com.br'
-    senha = senha #'Mac30054!'
+    url = url_sharepoint
+    time = time
+    login = login
+    senha = senha
     caminho_arquivo = caminho_arquivo[1:] if caminho_arquivo[0] == '/' else caminho_arquivo #'/Shared Documents/10- Desenvolvimento/Streamlit/Raio-X/Perguntas Raio-X.xlsx'
 
     ctx = ClientContext(url+time).with_credentials(UserCredential(login, senha))
